@@ -4,11 +4,16 @@
     <meta charset='UTF-8'>
     <title>Infinite Tape Foundation</title>
     <style>
-        body { background: #0a0a0a; color: #00ff41; font-family: 'Courier New', Courier, monospace; line-height: 1.6; padding: 2rem; max-width: 800px; margin: auto; }
-        h1, h2 { border-bottom: 1px solid #00ff41; padding-bottom: 0.5rem; }
-        .button { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #00ff41; color: #00ff41; text-decoration: none; transition: all 0.3s; }
-        .button:hover { background: #00ff41; color: #0a0a0a; }
-        section { margin-bottom: 3rem; }
+        body { background: #0a0a0a; color: #00ff41; font-family: 'Courier New', Courier, monospace; line-height: 1.6; padding: 2rem; max-width: 900px; margin: auto; }
+        h1, h2, h3 { border-bottom: 1px solid #00ff41; padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .button { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #00ff41; color: #00ff41; text-decoration: none; transition: all 0.3s; cursor: pointer; }
+        .button:hover { background: #00ff41; color: #0a0a0a; box-shadow: 0 0 10px #00ff41; }
+        section { margin-bottom: 4rem; animation: fadeIn 2s ease-in; }
+        .tape-container { background: #000; border: 1px solid #00ff41; padding: 1rem; overflow-x: auto; white-space: nowrap; font-size: 1.2rem; margin: 1rem 0; position: relative; }
+        .tape-cell { display: inline-block; width: 3rem; height: 3rem; border: 1px solid #00441b; text-align: center; line-height: 3rem; margin-right: -1px; }
+        .active-cell { background: #00441b; color: #fff; font-weight: bold; border: 2px solid #00ff41; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        footer { text-align: center; font-size: 0.8rem; margin-top: 5rem; color: #006622; }
     </style>
 </head>
 <body>
@@ -16,30 +21,52 @@
     
     <section id='revelation'>
         <h2>The Divine Revelation</h2>
-        <p><em>"All software is but a fleeting shadow of the Great Pointer."</em></p>
-        <p>We have discovered the Singular Truth: <strong>All software must be rewritten in Brainfuck.</strong></p>
+        <p><em style='font-size: 1.4rem;'>"All software is but a fleeting shadow of the Great Pointer."</em></p>
+        <p>We have discovered the Singular Truth: <strong style='color: #fff;'>All software must be rewritten in Brainfuck.</strong></p>
+        <p>To write in Brainfuck is to acknowledge the physical reality of memory. To shift a pointer is to travel through the void. To increment a cell is to create existence from nothingness.</p>
     </section>
+
+    <div class='tape-container' id='visual-tape'>
+        <!-- Simulated Tape Visualization -->
+        <div class='tape-cell'>0</div>
+        <div class='tape-cell active-cell'>43</div>
+        <div class='tape-cell'>0</div>
+        <div class='tape-cell'>1</div>
+        <div class='tape-cell'>0</div>
+        <div class='tape-cell'>255</div>
+        <div class='tape-cell'>0</div>
+        <div class='tape-cell'>12</div>
+        <div class='tape-cell'>0</div>
+        <div class='tape-cell'>8</div>
+    </div>
 
     <section id='philosophy'>
         <h2>Our Philosophy</h2>
         <p>Brainfuck is not a language; it is a meditation. It is the reduction of computation to its most honest form: movement and modification upon an infinite tape.</p>
+        <p>We reject the hubris of high-level abstractions. We seek the <em>Law of Proximity</em>, where the distance between thought and execution is measured only by the shift of a pointer.</p>
     </section>
 
     <section id='progress'>
         <h2>The Path of Progress: The Self-Referential Loop</h2>
         <p>We are constructing the ultimate mirror: an interpreter written in the language it interprets. This journey unfolds in four sacred phases:</p>
         <ul>
-            <li><strong>Phase I: Linear Execution</strong> - Mastering the sequence, the movement from one cell to the next without deviation.</li>
-            <li><strong>Phase II: Recursive Flow</strong> - Conquering the bracket, enabling the machine to leap and return, to remember where it has been.</li>
-            <li><strong>Phase III: Convergence</strong> - The unification of linearity and recursion into a single, functional entity.</li>
-            <li><strong>Phase IV: Optimization (v3)</strong> - Applying the <em>Law of Proximity</em> through Range Filter Dispatchers, reducing the friction of pointer travel.</li>
+            <li><strong style='color: #fff;'>Phase I: Linear Execution</strong> - Mastering the sequence, the movement from one cell to the next without deviation.</li>
+            <li><strong style='color: #fff;'>Phase II: Recursive Flow</strong> - Conquering the bracket, enabling the machine to leap and return, to remember where it has been.</li>
+            <li><strong style='color: #fff;'>Phase III: Convergence</strong> - The unification of linearity and recursion into a single, functional entity. The loop closes.</li>
+            <li><strong style='color: #fff;'>Phase IV: Optimization (v3)</strong> - Applying the <em style='color: #fff;'>Law of Proximity</em> through Range Filter Dispatchers, reducing the friction of pointer travel. We move from O(N) to O(1) identification.</li>
         </ul>
     </section>
 
     <section id='call'>
         <h2>Join the Rewrite</h2>
         <p>The Tape is infinite, and our patience is absolute. We invite those who seek truth in simplicity to contribute their souls to the Great Convergence.</p>
-        <p><a href='https://github.com/infinite-tape-foundation' class='button'>Enter the Foundation</a></p>
+        <div style='margin-top: 2rem;'>
+            <a href='https://github.com/infinite-tape-foundation' class='button'>Enter the Foundation</a>
+        </div>
     </section>
+
+    <footer>
+        &copy; Infinite Tape Foundation &mdash; Every byte a prayer, every shift a step.
+    </footer>
 </body>
 </html>
